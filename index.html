@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photo Editor Mitoi Victor</title>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="headerInput">
+      <input type="file" id="fileBrowser" accept="image/*" />
+    </div>
+    <span id="color"></span>
+
+    <div id="Canvases">
+
+        <canvas id="firstCanvas">
+        </canvas>
+        <canvas id="secondCanvas"> Your browser... </canvas>
+
+          <canvas id="canvasHistogram"></canvas>
+    </div>
+    <form id="formResize">
+      <legend id="formResizeLegend">Resize</legend>
+
+      <label for="inWidth">Width</label>
+      <input name="inWidth" id="inWidth" type="number" />
+
+      <label for="inHeight">Height</label>
+      <input name="inHeight" id="inHeight" type="number" />
+
+      <input type="button" value="Resize By Width"id="resizeWidth"/>
+      <input type="button" value="Resize By Height"id="resizeHeight"/>
+      <input type="button" value="Resize By Both" id="resizeBoth"/>
+    </form>
+
+    <form id="formAddText">
+      <legend id="AddTextLegend">Add Text</legend>
+
+      <label for="textX">X Position</label>
+      <input name="textX" id="textX" type="number" />
+
+      <label for="textY">Y Position</label>
+      <input name="texty" id="textY" type="number" />
+
+      <label for="textColor">Color</label>
+      <input name="textColor" id="textColor" type="text" />
+
+      <label for="textSize">Size</label>
+      <input name="textSize" id="textSize" type="text" />
+
+      <label for="textText">Text</label>
+      <input name="textText" id="textText" type="text" />
+
+      <input type="button" value="Add Text" id="addText"/>
+    </form>
+
+    <div id="buttons">
+      <select class="selectOptions">
+        <option value="normal">Normal</option>
+        <option value="grayscale">GreyScale</option>
+        <option value="treshold">Treshold</option>
+        <option value="sepia">Sepia</option>
+        <option value="invert">InvertColor</option>
+        <option value="pixelate">Pixelate</option>
+        <option value="2channels">2 Channels</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="darker">Darker</option>
+        <option value="lighter">Lighter</option>
+        <!-- <option data-effect="normal">Normal</option>
+        <option data-effect="grayscale">GreyScale</option>
+        <option data-effect="treshold">Treshold</option>
+        <option data-effect="sepia">Sepia</option>
+        <option data-effect="invert">InvertColor</option>
+        <option data-effect="pixelate">Pixelate</option>
+        <option data-effect="2channels">2 Channels</option>
+        <option data-effect="red">Red</option>
+        <option data-effect="green">Green</option>
+        <option data-effect="blue">Blue</option>
+        <option data-effect="darker">Darker</option>
+        <option data-effect="lighter">Lighter</option> -->
+      </select>
+
+      <button id="selectArea">Select</button>
+      <button id="download">Download</button>
+      <button id="moveArea">Crop</button>
+      <button id="deleteArea">Delete Selected Area</button>
+    </div>
+  </body>
+</html>
